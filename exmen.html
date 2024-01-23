@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coupe</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: small;
+        }
+        .top{
+            display: flex;
+            margin: 10px;
+            color: rgb(139, 12, 12);
+        }
+        .top img{
+            object-fit: contain;
+        }
+        .navbar{
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            height: 30px;
+            text-align: center;
+            padding-bottom: 10px;
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+        .navbar ul{
+            display: flex;
+            list-style: none;
+            margin-left: 65%;
+            justify-content: center;
+        }
+        .navbar ul li {
+            padding-right: 30px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .navbar ul li:hover{
+            transform: scale(1.1);
+        }
+        .text{
+            margin: 10px;
+            margin-top: 70px;
+        }
+        .text h2{
+            font-size: medium;
+            margin-bottom: 5px;
+            color: rgb(3, 72, 3);
+        }
+        .container div img{
+            width: 500px;
+            height: 250px;
+            object-fit: cover;
+            transition: 0.5s;
+            border-radius: 10px;
+            box-shadow: 4px 3px 7px black;
+            cursor:pointer;
+        }
+        .container div img:hover{
+            transform: scale(1.1);
+        }
+        .container div{
+            margin-right: 50px;
+            margin-top: 20px;
+        }
+        .container{
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .container div hr{
+            height: 2px;
+            background-color: black;
+            margin-top: 20px;
+        }
+        .downbar{
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            height: 30px;
+            text-align: center;
+            padding-bottom: 10px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+        .downbar ul{
+            display: flex;
+            list-style: none;
+            margin-left: 70%;
+            justify-content: center;
+        }
+        .downbar ul li {
+            padding-right: 30px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .downbar ul li:hover{
+            transform: scale(1.1);
+        }
+        .downbar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        @media  screen and (max-width: 700px) {
+            body{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 10px;
+            }
+            .container div img{
+                width: 200px;
+                height: 125px;
+            }
+            .container{
+                margin-left: 40px;
+            }
+            .navbar ul{
+                margin-left: 30%;
+            }
+            .downbar ul{
+                margin-left: 30%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR0NxwcbQg_3_Q3l3h06Fn7QTs4YlfpEckRuIuYDgB1mUpvYvhudwXpUpnzVMzCAFHtlM&usqp=CAU" width="50px" height="50px">
+        <h2>COUPE DU MONDE 2022</h2>
+    </div>
+
+    <div class="navbar">
+        <ul>
+            <li>ACTUALITES</li>
+            <li>EQUIPES</li>
+            <li>PROGRAMMES TV</li>
+        </ul>
+    </div>
+
+    <div class="text">
+        <h2>ACTUALITES</h2>
+        <p>Retrouvez toutes les infos de la coupe du monde 2022 
+            de football qui se deroule entre le 20 novembre
+            au 10 decembre 2022 au Qatar
+        </p>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/12/10/3506191-71470988-2560-1440.jpg">
+            <p>Maroc - Espagne : autopsie d'une 
+                desillusion deroulante et d'un exploit lorem lorem
+                <br> rugissant.
+            </p>
+            <hr>
+        </div>
+
+        <div>
+            <img src="https://img.lemde.fr/2022/12/06/0/0/4861/3240/1440/960/60/0/5d7d893_5943479-01-06.jpg">
+            <p>La Selecao, un soutien 5 etoiles pour le Roi Lorem ipsum dolor sit amet,lorem lorem
+                <br>Pele.
+            </p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="downbar">
+        <ul>
+            <li><a href="mailto:coupemonde@fifa.com">CONTACT</a></li>
+            <li>°</li>
+            <li>MENTIONS LEGALES</li>
+        </ul>
+    </div>
+</body>
+</body>
+</html>

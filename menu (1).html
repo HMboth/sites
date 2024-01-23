@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        body{
+            font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+            font-weight: 700;
+            height: 1300px;
+            word-spacing: 10px;
+            background: rgb(29,91,37);
+            background: radial-gradient(circle, rgba(29,91,37,1) 0%, rgba(1,6,1,1) 100%);
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 45%;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 0 0 70% 70% / 20%;
+        }
+
+        header .background-image {
+            background: url('https://wallpapercave.com/wp/wp7580475.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            filter: brightness(50%);
+        }
+
+        header .overlay {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding: 80px;
+            color: beige;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        h1 {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-size: 100px;
+            word-spacing: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 50px;
+        }
+
+        h3, p {
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 40px;
+            letter-spacing: 4px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px 50px;
+            color: beige;
+            background: rgba(29,91,37,1);
+            margin-top: 70px;
+            border: 3px double rgba(1,6,1,1);
+            box-shadow: 2px 3px 10px black;
+            cursor: pointer;
+            transition: .2s;
+            text-decoration: none;
+        }
+        button:hover{
+            border: 3px double;
+            box-shadow: inset 0 0 20px rgba(155, 155, 155, 0.5), 0 0 20px rgba(141, 140, 140, 0.2);
+            outline-offset: 30px;
+            outline-color: rgba(115, 115, 115, 0.4);
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        .header{letter-spacing: 15px; 
+            color: burlywood;}
+        .container .menu{
+            border: 7px double beige;
+            border-radius: 10px;
+            margin: 50px;
+        }
+        .container div p:first-child{
+            font-size: x-large;
+            color: beige;
+        }
+        img{
+            margin-bottom: 40px;
+            width: 300px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-left: 70px;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px black;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            opacity: 1;
+        }
+        img:hover{
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        .middle {
+            transition: .5s ease;
+            cursor: pointer;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            margin-top: 98px;
+            margin-left: -145px;
+            -ms-transform: translate(-50%, -50%);
+        }
+        .container div div:hover .middle {
+            opacity: 1;
+        }
+        .container div div:hover img {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        .text {
+            background-color: rgb(85, 132, 99);
+            border-radius: 10px;
+            border: 4px double rgb(48, 88, 60);
+            box-shadow: 2px 3px 10px black;
+            color: beige;
+            font-size: 18px;
+            padding: 10px 30px;
+        }
+        .select{
+            border: 7px double beige;
+            border-radius: 10px;
+            margin: 50px;
+            width: 80%;
+            margin-left: 128px;
+        }
+        table{
+            color: rgb(174, 174, 125);
+            font-size: large;
+            text-align: center;
+            letter-spacing: 3px;
+            margin-left: 90px;
+            margin-bottom: 20px;
+        }
+
+        hr{
+            background-color: rgb(85, 132, 99);
+        }
+        #order{
+            letter-spacing: 15px; 
+            color: burlywood;
+        }
+        footer ul li{
+            list-style: none;
+            padding-left: 40px;
+            padding-top: 15px;
+            cursor: pointer;
+        }
+        footer ul{
+            margin-left: 73%;
+        }
+        footer{
+            background-color: rgba(1,6,1,1);
+            position: relative;
+            bottom: 0;
+            height: 50px;
+        }
+        .plus{
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="background-image"></div>
+        <div class="overlay">
+            <h1>Simply The Best</h1>
+            <h3>Reasons for Choosing US</h3>
+            <p>We make sure to serve you the best of the best pastries and drinks you could ever try in your life.
+                A hint of heaven for your soul and heart. You won't get tired of trying it.
+            </p>
+            <br>
+            <a href="#menu"><button>Check Menu</button></a>
+        </div>
+    </header>
+
+
+    <hr>
+    <div class="header text-center fs-1" id="menu">MENU COMBO</div>
+    <div class="container d-flex w-100">
+        <div class="menu w-50">
+            <p class="text-center">DRINKS</p>
+            <div class="d-flex">
+                <img src="https://www.1001cocktails.com/wp-content/uploads/1001cocktails/2023/08/shutterstock_2036130758-scaled.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+            <div class="d-flex">
+                <img src="https://ehonline.eu/wp-content/uploads/2018/11/carte-boisson-min.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+            <div class="d-flex">    
+                <img src="https://st.depositphotos.com/1158226/2975/i/450/depositphotos_29758547-stock-photo-crushed-sugar-and-citrus-fruits.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu w-50">
+            <p class="text-center">PASTRIES</p>
+            <div class="d-flex">
+                <img src="https://www.hotelarbrevoyageur.com/uploads/images/page-patisserie-le-colibri.8612.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+            <div class="d-flex">
+                <img src="https://www.boulangerie-petitjean.fr/wp-content/uploads/2021/08/3-chocolats-entremet-patisserie-petit-jean-cherbourg-cotentin-2.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+            <div class="d-flex">    
+                <img src="https://www.delifrance.com/media/wysiwyg/Viennoiserie_Family.jpg">
+                <div class="middle">
+                    <a href="#down" style="text-decoration: none;"><div class="text">Order</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="text-center fs-1" id="order">YOUR ORDERS</p>
+
+    <div class="select" id="down">
+        <div>
+            <p class="p-3" style="color: beige; font-size: large;">Drinks List :</p>
+            <div class="mx-5">
+                <table id="boissonTable">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>UnitPrice</th>
+                            <th>Quantity</th>
+                            <th>TotalPrice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <select id="boisson" class="form-select">
+                                    <option selected disabled>Select</option>
+                                </select>
+                            </td>
+                            <td><input type="text" disabled id="prixBoisson" class="form-control" /></td>
+                            <td><input type="number"  id="qteBoisson" class="form-control c" min="0"/></td>
+                            <td><input type="text"  id="ptBoisson" class="form-control" disabled value="0"/></td>
+                            <td><i class="plus fa-solid fa-circle-plus boisson-plus fa-xl"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <p class="p-3" style="color: beige; font-size: large;;">Pastries List :</p>
+            <div class="mx-5">
+                <table id="patissTable">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>UnitPrice</th>
+                            <th>Quantity</th>
+                            <th>TotalPrice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <select id="patiss" class="form-select">
+                                    <option selected disabled>Select</option>
+                                </select>
+                            </td>
+                            <td><input type="text" disabled id="prixPatiss" class="form-control" /></td>
+                            <td><input type="number"  id="qtePatiss" class="form-control c" min="0"/></td>
+                            <td><input type="text"  id="ptPatiss" class="form-control" disabled value="0"/></td>
+                            <td><i class="plus fa-solid fa-circle-plus patiss-plus fa-xl"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <ul class="d-flex">
+            <li><i class="fa-solid fa-circle-question fa-lg" style="color: beige;"></i></li>
+            <li><i class="fa-solid fa-phone fa-lg" style="color: beige;"></i></li>
+            <li><i class="fa-solid fa-envelope fa-lg" style= "color: beige;"></i></li>
+            <li><i class="fa-solid fa-circle-info fa-lg" style= "color: beige;"></i></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        let boissons=[{nom:'Berry Heaven',prix:50},{nom:'Bali Orangi',prix:40},{nom:'Citronade',prix:40}];
+        let patisses=[{nom:'Soirees',prix:200},{nom:'Tarte Berry',prix:300},{nom:'Viennoiserie',prix:150}];
+        for(e of boissons){
+              document.getElementById('boisson').innerHTML+=`<option value=${e.prix}>${e['nom']}</option>`
+          }
+        for(e of patisses){
+              document.getElementById('patiss').innerHTML+=`<option value=${e.prix}>${e['nom']}</option>`
+          }
+
+        document.getElementById('boisson').addEventListener('change',function(){
+            document.getElementById('prixBoisson').value=this.value;
+        });
+        document.getElementById('patiss').addEventListener('change',function(){
+            document.getElementById('prixPatiss').value=this.value;
+        });
+
+        document.getElementById('qteBoisson').onchange=function(){
+            if(document.getElementById('prixBoisson').value=='')
+                      alert('Please choose an item');
+            else{
+
+                 let pt=parseFloat( document.getElementById('prixBoisson').value)*parseFloat(this.value);
+                 document.getElementById('ptBoisson').value=pt;
+            }
+        }
+
+        document.getElementById('qtePatiss').onchange=function(){
+            if(document.getElementById('prixPatiss').value=='')
+                      alert('Please choose an item');
+            else{
+
+                 let pt=parseFloat( document.getElementById('prixPatiss').value)*parseFloat(this.value);
+                 document.getElementById('ptPatiss').value=pt;
+            }
+        }
+
+
+        function addRow(tableId) {
+            let table = document.getElementById(tableId);
+            let newRow = table.rows[1].cloneNode(true); 
+            newRow.cells[4].innerHTML = '';
+
+            // Generate unique IDs for the new inputs
+            let uniqueId = Date.now(); // Using a timestamp for uniqueness
+
+            // Update the IDs of the cloned row inputs
+            newRow.cells[0].getElementsByTagName('select')[0].id = 'boisson' + uniqueId;
+            newRow.cells[1].getElementsByTagName('input')[0].id = 'prixBoisson' + uniqueId;
+            newRow.cells[2].getElementsByTagName('input')[0].id = 'qteBoisson' + uniqueId;
+            newRow.cells[3].getElementsByTagName('input')[0].id = 'ptBoisson' + uniqueId;
+
+            // Clear input values in the cloned row
+            newRow.cells[0].getElementsByTagName('select')[0].selectedIndex = 0;
+            newRow.cells[1].getElementsByTagName('input')[0].value = '';
+            newRow.cells[2].getElementsByTagName('input')[0].value = '';
+            newRow.cells[3].getElementsByTagName('input')[0].value = '0';
+
+            // Append the cloned row to the table
+            table.appendChild(newRow);
+        }
+
+        document.querySelectorAll('.plus').forEach(function (button) {
+            button.addEventListener('click', function () {
+                if (button.classList.contains('boisson-plus')) {
+                    addRow('boissonTable');
+                } else if (button.classList.contains('patiss-plus')) {
+                    addRow('patissTable');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
